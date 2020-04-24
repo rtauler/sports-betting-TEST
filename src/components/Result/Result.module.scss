@@ -10,34 +10,55 @@
             width: $width;
             height: 100%;
             float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .position_indicator {
             @include common-card-part(13%);
             p {
                 @include position-indicator;
-                margin: 0;
                 text-align: center;
-                vertical-align: middle;
+                margin: 0;
             }
         }
         .company_logo {
             @include common-card-part(30%);
+            img {
+                height: calc(100% - 20px);
+            }
         }
         .review_link {
             @include common-card-part(22%);
-            @include review-link;
+            p {
+                margin: 0;
+                a {
+                    @include review-link;
+                }
+            }
         }
         .info {
             @include common-card-part(23%);
-            p.type_indicator {
-                @include type-indicator;
-            }
-            p.amount {
-                @include amount;
+            flex-direction: column;
+            .info_wrapper {
+                p.type_indicator {
+                    @include type-indicator;
+                    margin: 0;
+                }
+                p.amount {
+                    @include amount;
+                    margin: 0;
+                }
             }
         }
         .expand {
             @include common-card-part(12%);
+            background-color: $orangey-red;
+            border-radius: 0 8px 8px 0;
+            background-image: url('../../assets/icons/right.svg');
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: center;
         }
     }
 }
