@@ -1,0 +1,41 @@
+[{
+        "id": 1,
+        "logo": "si",
+        "stars": 5,
+        "review": "review1.html",
+        "type": "Bonus",
+        "amount": "$200"
+    },
+    {
+        "id": 2,
+        "logo": "pp",
+        "stars": 4,
+        "review": "review2.html",
+        "type": "Free Bet",
+        "amount": "$250"
+    },
+    {
+        "id": 3,
+        "logo": "bw",
+        "stars": 5,
+        "review": "review3.html",
+        "type": "Bonus",
+        "amount": "$250"
+    },
+    {
+        "id": 4,
+        "logo": "ss",
+        "stars": 3,
+        "review": "review4.html",
+        "type": "Free Bet",
+        "amount": "$200"
+    },
+    {
+        "id": 5,
+        "logo": "bd",
+        "stars": 5,
+        "review": "review5.html",
+        "type": "Bonus",
+        "amount": "$200"
+    }
+]
