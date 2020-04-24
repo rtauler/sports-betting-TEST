@@ -1,0 +1,81 @@
+//Color variables
+$greyish-brown: #484848;
+$orangey-red: #f44337;
+$vivid-blue: #2a42ed;
+$white: #ffffff;
+$black-20: rgba(0, 0, 0, 0.2);
+//Fonts
+@font-face {
+    font-family: SourceSansPro;
+    src: local(SourceSansPro-Regular), url(/assets/fonts/SourceSansPro-Regular.woff2) format("woff2"), url(/assets/fonts/SourceSansPro-Regular.woff) format("woff"), url(/assets/fonts/SourceSansPro-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: local(SourceSansPro-SemiBold), url(/assets/fonts/SourceSansPro-SemiBold.woff2) format("woff2"), url(/assets/fonts/SourceSansPro-SemiBold.woff) format("woff"), url(/assets/fonts/SourceSansPro-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: local(SourceSansPro-Bold), url(/assets/fonts/SourceSansPro-Bold.woff2) format("woff2"), url(/assets/fonts/SourceSansPro-Bold.woff) format("woff"), url(/assets/fonts/SourceSansPro-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@mixin position-indicator {
+    font-family: SourceSansPro;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: -1.01px;
+    color: $greyish-brown;
+}
+
+@mixin amount {
+    font-family: SourceSansPro;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: -0.23px;
+    text-align: center;
+    color: $vivid-blue;
+}
+
+@mixin view-all {
+    font-family: SourceSansPro;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $vivid-blue-two;
+}
+
+@mixin sort-filter-link {
+    font-family: SourceSansPro;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $greyish-brown;
+}
+
+@mixin review-link {
+    font-family: SourceSansPro;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: $greyish-brown;
+}
+
+@mixin type-indicator {
+    font-family: SourceSansPro;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $vivid-blue;
+}
