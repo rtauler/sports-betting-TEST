@@ -8,8 +8,6 @@ function Result(props: {
   review: React.ReactNode,
   type: React.ReactNode,
   amount: React.ReactNode,
-
-  
 }) {
   return (
     <div className={styles.Result}>

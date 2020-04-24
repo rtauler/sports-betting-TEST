@@ -1,5 +1,6 @@
 [{
         "id": 1,
+        "name": "Sports Interaction",
         "logo": "si",
         "stars": 5,
         "review": "review1.html",
@@ -8,6 +9,7 @@
     },
     {
         "id": 2,
+        "name": "PowerPlay Sports",
         "logo": "pp",
         "stars": 4,
         "review": "review2.html",
@@ -16,6 +18,7 @@
     },
     {
         "id": 3,
+        "name": "Betway",
         "logo": "bw",
         "stars": 5,
         "review": "review3.html",
@@ -24,6 +27,7 @@
     },
     {
         "id": 4,
+        "name": "Spin Sports",
         "logo": "ss",
         "stars": 3,
         "review": "review4.html",
@@ -32,6 +36,7 @@
     },
     {
         "id": 5,
+        "name": "Bodog",
         "logo": "bd",
         "stars": 5,
         "review": "review5.html",

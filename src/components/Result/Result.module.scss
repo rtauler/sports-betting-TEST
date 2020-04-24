@@ -20,7 +20,7 @@
         margin-bottom: 10px;
         @include box-animation;
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.015);
             @include box-animation;
         }
         .position_indicator {
