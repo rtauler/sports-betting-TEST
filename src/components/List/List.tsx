@@ -52,6 +52,8 @@ class List extends React.Component<any, any> {
                 stars={item.stars}
                 review={item.review}
                 type={item.type}
+                typeL={item.typeL}
+                exclusive={item.exclusive}
                 amount={item.amount}
                 page={item.page} 
                 seo={item.seo}

@@ -7,6 +7,8 @@ function Result(props: {
   stars: React.ReactNode,
   review: React.ReactNode,
   type: React.ReactNode,
+  typeL: React.ReactNode,
+  exclusive: React.ReactNode,
   amount: React.ReactNode,
   page: React.ReactNode,
   seo: React.ReactNode,
@@ -30,6 +32,8 @@ function Result(props: {
           </div>
           <div className={styles.info}>
             <div className={styles.info_wrapper}>
+              <p className={styles.type_indicator_lb}>{props.exclusive}</p>
+              <p className={styles.type_indicator_l}>{props.typeL}</p>
               <p className={styles.type_indicator}>{props.type}</p>
               <p className={styles.amount}>{props.amount}</p>
             </div>

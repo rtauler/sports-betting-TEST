@@ -5,6 +5,8 @@
         "stars": 5,
         "review": "review1.html",
         "type": "Bonus",
+        "typeL": "Bonus up to",
+        "exclusive": "- Exclusive -",
         "amount": "$200",
         "page": "https://www.sportsinteraction.com",
         "seo": "linkSEO1.html"
@@ -16,6 +18,8 @@
         "stars": 4,
         "review": "review2.html",
         "type": "Free Bet",
+        "typeL": "Free Bet",
+        "exclusive": "- Exclusive -",
         "amount": "$250",
         "page": "https://www.powerplay.com",
         "seo": "linkSEO2.html"
@@ -28,6 +32,8 @@
         "stars": 5,
         "review": "review3.html",
         "type": "Bonus",
+        "typeL": "100% Sign Up Bonus Up to",
+        "exclusive": "",
         "amount": "$250",
         "page": "https://betway.es/en/",
         "seo": "linkSEO3.html"
@@ -39,6 +45,8 @@
         "stars": 3,
         "review": "review4.html",
         "type": "Free Bet",
+        "typeL": "Free Bet Up to",
+        "exclusive": "- Exclusive -",
         "amount": "$200",
         "page": "https://www.spinsports.com",
         "seo": "linkSEO4.html"
@@ -50,6 +58,8 @@
         "stars": 5,
         "review": "review5.html",
         "type": "Bonus",
+        "typeL": "100% Sign Up Bonus Up to",
+        "exclusive": "",
         "amount": "$200",
         "page": "https://www.bodog.com",
         "seo": "linkSEO5.html"
