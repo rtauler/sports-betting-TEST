@@ -1,3 +1,13 @@
+@import '../../variables.scss';
 .List {
-    padding: 10px 10px 0 10px;
+    .filter_area {
+        a.sort_filter_link {
+            @include sort-filter-link;
+            float: right;
+        }
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 10px 0;
+    }
+    padding: 10px;
 }

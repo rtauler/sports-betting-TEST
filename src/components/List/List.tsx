@@ -5,6 +5,7 @@ import Result from '../Result/Result';
 //load external json with item list
 import Pages from './pages.json';
 
+
 class List extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -24,21 +25,24 @@ class List extends React.Component<any, any> {
   render() {
     //establish logic on what to do when clicking on the sort anchor
     if (this.state.isToggleOn === true) {
-      Pages.sort(function(a, b) { 
+      Pages.sort(function (a, b) {
         //sort alfabeticaly
         return a.name.localeCompare(b.name);
       });
     } else {
-      Pages.sort(function(a, b) { 
+      Pages.sort(function (a, b) {
         //sort by id
         return a.id - b.id;
       });
-    }
-
+    } 
+  
     return (
       <div className={styles.List}>
         {/* click on sort anchor calls handle click function to sort the list items */}
-        <a href="test.html" onClick={this.handleClick}>sort alfabeticaly</a>
+        <div className={styles.filter_area}>
+          <a href="test.html" className={styles.sort_filter_link} onClick={this.handleClick}>Sort Alfabeticaly</a>
+        </div>
+
         {
           Pages.map(function (item, index) {
             return (
@@ -48,10 +52,14 @@ class List extends React.Component<any, any> {
                 stars={item.stars}
                 review={item.review}
                 type={item.type}
-                amount={item.amount} />
+                amount={item.amount}
+                page={item.page} 
+                seo={item.seo}
+              />
             )
           })
         }
+
       </div>
     );
   }

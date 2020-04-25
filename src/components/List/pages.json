@@ -5,25 +5,32 @@
         "stars": 5,
         "review": "review1.html",
         "type": "Bonus",
-        "amount": "$200"
+        "amount": "$200",
+        "page": "https://www.sportsinteraction.com",
+        "seo": "linkSEO1.html"
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "PowerPlay Sports",
         "logo": "pp",
         "stars": 4,
         "review": "review2.html",
         "type": "Free Bet",
-        "amount": "$250"
+        "amount": "$250",
+        "page": "https://www.powerplay.com",
+        "seo": "linkSEO2.html"
+
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Betway",
         "logo": "bw",
         "stars": 5,
         "review": "review3.html",
         "type": "Bonus",
-        "amount": "$250"
+        "amount": "$250",
+        "page": "https://betway.es/en/",
+        "seo": "linkSEO3.html"
     },
     {
         "id": 4,
@@ -32,7 +39,9 @@
         "stars": 3,
         "review": "review4.html",
         "type": "Free Bet",
-        "amount": "$200"
+        "amount": "$200",
+        "page": "https://www.spinsports.com",
+        "seo": "linkSEO4.html"
     },
     {
         "id": 5,
@@ -41,6 +50,8 @@
         "stars": 5,
         "review": "review5.html",
         "type": "Bonus",
-        "amount": "$200"
+        "amount": "$200",
+        "page": "https://www.bodog.com",
+        "seo": "linkSEO5.html"
     }
 ]
