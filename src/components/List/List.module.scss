@@ -4,6 +4,9 @@
         a.sort_filter_link {
             @include sort-filter-link;
             float: right;
+            @media screen and (min-width: $break-large) {
+                float: left;
+            }
         }
         width: 100%;
         display: inline-block;

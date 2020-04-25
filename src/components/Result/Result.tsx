@@ -39,7 +39,7 @@ function Result(props: {
               <p className={styles.amount}>{props.amount}</p>
             </div>
           </div>
-          <div className={styles.expand}>Play Now</div>
+          <div className={styles.expand}><p>Play Now</p></div>
         </div>
       </a>
     </div>

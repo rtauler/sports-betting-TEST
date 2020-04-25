@@ -101,3 +101,12 @@ $break-large: 900px;
     text-align: center;
     color: $vivid-blue;
 }
+
+@mixin play-now {
+    font-family: SourceSansPro;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: $white;
+}

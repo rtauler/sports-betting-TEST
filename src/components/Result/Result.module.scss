@@ -76,8 +76,7 @@
         }
         .info {
             @include common-card-part(19%);
-            display: flex;
-            align-items: center;
+            @include center;
             justify-content: center;
             .info_wrapper {
                 width: 100%;
@@ -127,14 +126,24 @@
         }
         .expand {
             @include common-card-part(12%);
+            @include center;
+            justify-content: center;
+            p {
+                @include play-now;
+                display: none;
+                @media screen and (min-width: $break-large) {
+                    display: inline-block;
+                }
+            }
             background-color: $orangey-red;
             border-radius: 0 8px 8px 0;
             background-image: url('../../assets/icons/right.svg');
             background-repeat: no-repeat;
-            background-size: 20px;
+            background-size: 15px;
             background-position: center;
             @media screen and (min-width: $break-large) {
                 width: 10%;
+                background-position: calc(100% - 10px) 50%;
             }
         }
     }
