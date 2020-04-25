@@ -56,6 +56,13 @@
         }
         .review_link {
             @include common-card-part(22%);
+            img.stars {
+                width: 55px;
+                display: none;
+                @media screen and (min-width: $break-large) {
+                    display: block;
+                }
+            }
             p {
                 margin: 0;
                 padding: 0 0 0 15px;

@@ -26,6 +26,7 @@ function Result(props: {
             </a>
           </div>
           <div className={styles.review_link}>
+            <img className={styles.stars} src={require(`../../assets/icons/${props.stars}stars.svg`)} alt="" />
             <p>
               <a href={`${props.review}`}>Review</a>
             </p>
@@ -38,7 +39,7 @@ function Result(props: {
               <p className={styles.amount}>{props.amount}</p>
             </div>
           </div>
-          <div className={styles.expand}></div>
+          <div className={styles.expand}>Play Now</div>
         </div>
       </a>
     </div>
