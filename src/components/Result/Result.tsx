@@ -10,7 +10,7 @@ function Result(props:any) {
             <p>{props.id}</p>
           </div>
           <div className={styles.company_logo}>
-            <a className="seo-url" href={'' + props.seo}>
+            <a id="seo_url" href={'' + props.seo}>
               <img className="logo" src={require(`../../assets/logos/${props.logo}.svg`)} alt="" />
             </a>
           </div>
