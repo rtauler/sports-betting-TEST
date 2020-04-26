@@ -1,1 +1,54 @@
-.Header {}
+@import '../../variables.scss';
+.Header {
+    background-color: black;
+    height: 65px;
+    .menu_wrapper {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        .logo {
+            width: 128px;
+            height: 65px;
+            background-image: url('../../assets/logos/csb.svg');
+            background-repeat: no-repeat;
+            float: left;
+        }
+        ul.menu {
+            margin: 0;
+            padding: 20px 0 20px 20px;
+            display: flex;
+            align-items: center;
+            li {
+                list-style-type: none;
+                display: inline;
+                margin: 0 10px 0 0;
+                a {
+                    @include menu;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            @media screen and (max-width: $break-small) {
+                display: none;
+            }
+        }
+        @media screen and (max-width: $break-small) {
+            width: 80%;
+            margin: 0;
+        }
+    }
+    .hamb_menu {
+        display: none;
+        float: left;
+        @media screen and (max-width: $break-small) {
+            display: block;
+            width: 20%;
+            height: 100%;
+            background-image: url('../../assets/icons/hamb.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px;
+            cursor: pointer;
+        }
+    }
+}

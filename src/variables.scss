@@ -7,7 +7,7 @@ $black-20: rgba(0, 0, 0, 0.2);
 //animations
 $cubic-beizer: cubic-bezier(0.4, 0.0, 0.2, 1);
 //media queries size
-$break-small: 520px;
+$break-small: 600px;
 $break-large: 900px;
 //Fonts
 @font-face {
@@ -109,4 +109,14 @@ $break-large: 900px;
     letter-spacing: -0.25px;
     text-align: center;
     color: $white;
+}
+
+@mixin menu {
+    font-family: SourceSansPro;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
 }

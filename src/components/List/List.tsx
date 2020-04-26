@@ -26,7 +26,7 @@ class List extends React.Component<any, any> {
   //define transCard and prevent update on click on card anchor
   transItems(e: { preventDefault: () => void; }) {
     e.preventDefault();
-    if (window.innerWidth < 520) {
+    if (window.innerWidth < 600) {
       this.setState({isCard: false});
     }
     this.setState((prevState: { isCard: any; }) => ({
