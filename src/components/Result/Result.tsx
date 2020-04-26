@@ -1,23 +1,9 @@
 import React from 'react';
 import styles from './Result.module.scss';
 
-function Result(props: {
-  id: React.ReactNode,
-  logo: React.ReactNode,
-  stars: React.ReactNode,
-  review: React.ReactNode,
-  type: React.ReactNode,
-  typeL: React.ReactNode,
-  exclusive: React.ReactNode,
-  amount: React.ReactNode,
-  page: React.ReactNode,
-  seo: React.ReactNode,
-  isCard: React.ReactNode,
-}) {
+function Result(props:any) {
   return (
-    <div className={styles.Result + ' ' + styles.box}>
-      {/* <div className={ this.state.isCard ? styles.box : styles.Result+ ' ' +styles.box}> */}
-      {/* <div className={styles.Result}> */}
+      <div className={props.isCard ? styles.Result : styles.Result+ ' ' +styles.box}>
       < a href={'' + props.page} >
         <div className={styles.result_card}>
           <div className={styles.position_indicator}>

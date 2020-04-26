@@ -10,7 +10,7 @@ class List extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     //define initial state of sort order also define if item is card
-    this.state = { isSortAlf: false, isCard: false };
+    this.state = { isSortAlf: false, isCard: false, Pages: Pages };
     this.sortItems = this.sortItems.bind(this);
     this.transItems = this.transItems.bind(this);
   }
@@ -47,10 +47,10 @@ class List extends React.Component<any, any> {
     }
     //establish logic on what to do when click on chane view anchor
     if (this.state.isCard === true) {
-      const isCard = true;
+
     }
     else {
-      const isCard = false;
+
     }
 
     return (
@@ -65,7 +65,21 @@ class List extends React.Component<any, any> {
         {/* check if component is card or not */}
         <div className={this.state.isCard ? styles.items : styles.box_items}>
           {
-            Pages.map(function (item) {
+            //  Pages.map(function (item) {
+            this.state.Pages.map((item: {
+              id: React.ReactNode;
+              logo: React.ReactNode;
+              stars: React.ReactNode;
+              review: React.ReactNode;
+              type: React.ReactNode;
+              typeL: React.ReactNode;
+              exclusive: React.ReactNode;
+              amount: React.ReactNode;
+              page: React.ReactNode;
+              seo: React.ReactNode;
+              isCard : React.ReactNode;
+            }, i: any) => {
+              const isCardStatus = this.state.isCard;
               return (
                 <Result
                   id={item.id}
@@ -78,7 +92,7 @@ class List extends React.Component<any, any> {
                   amount={item.amount}
                   page={item.page}
                   seo={item.seo}
-                  isCard={""}
+                  isCard={isCardStatus}
                 />
               )
             })
@@ -88,6 +102,7 @@ class List extends React.Component<any, any> {
     );
   }
 }
+
 export default List;
 
 
