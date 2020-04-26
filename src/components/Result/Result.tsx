@@ -12,11 +12,13 @@ function Result(props: {
   amount: React.ReactNode,
   page: React.ReactNode,
   seo: React.ReactNode,
+  isCard: React.ReactNode,
 }) {
   return (
-    <div className={styles.Result+ ' ' +styles.box}>
-    {/* <div className={styles.Result}> */}
-      <a href={'' + props.page}>
+    <div className={styles.Result + ' ' + styles.box}>
+      {/* <div className={ this.state.isCard ? styles.box : styles.Result+ ' ' +styles.box}> */}
+      {/* <div className={styles.Result}> */}
+      < a href={'' + props.page} >
         <div className={styles.result_card}>
           <div className={styles.position_indicator}>
             <p>{props.id}</p>
@@ -42,8 +44,8 @@ function Result(props: {
           </div>
           <div className={styles.expand}><p>Play Now</p></div>
         </div>
-      </a>
-    </div>
+      </a >
+    </div >
   );
 }
 

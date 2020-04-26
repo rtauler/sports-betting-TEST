@@ -47,14 +47,13 @@ class List extends React.Component<any, any> {
     }
     //establish logic on what to do when click on chane view anchor
     if (this.state.isCard === true) {
-
+      const isCard = true;
     }
     else {
-
+      const isCard = false;
     }
 
     return (
-
       <div className={styles.List}>
         {/* click on sort anchor calls handle click function to sort the list items */}
         <div className={styles.filter_area}>
@@ -62,10 +61,11 @@ class List extends React.Component<any, any> {
           <p> </p>
           <a href="test.html" className={styles.sort_filter_link} onClick={this.transItems}>Change View</a>
         </div>
-        <div className={styles.items}>
-        {/* <div> */}
+
+        {/* check if component is card or not */}
+        <div className={this.state.isCard ? styles.items : styles.box_items}>
           {
-            Pages.map(function (item, index) {
+            Pages.map(function (item) {
               return (
                 <Result
                   id={item.id}
@@ -78,6 +78,7 @@ class List extends React.Component<any, any> {
                   amount={item.amount}
                   page={item.page}
                   seo={item.seo}
+                  isCard={""}
                 />
               )
             })
