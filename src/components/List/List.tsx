@@ -54,6 +54,7 @@ class List extends React.Component<any, any> {
     }
 
     return (
+
       <div className={styles.List}>
         {/* click on sort anchor calls handle click function to sort the list items */}
         <div className={styles.filter_area}>
@@ -61,26 +62,27 @@ class List extends React.Component<any, any> {
           <p> </p>
           <a href="test.html" className={styles.sort_filter_link} onClick={this.transItems}>Change View</a>
         </div>
-
-        {
-          Pages.map(function (item, index) {
-            return (
-              <Result
-                id={item.id}
-                logo={item.logo}
-                stars={item.stars}
-                review={item.review}
-                type={item.type}
-                typeL={item.typeL}
-                exclusive={item.exclusive}
-                amount={item.amount}
-                page={item.page}
-                seo={item.seo}
-              />
-            )
-          })
-        }
-
+        <div className={styles.items}>
+        {/* <div> */}
+          {
+            Pages.map(function (item, index) {
+              return (
+                <Result
+                  id={item.id}
+                  logo={item.logo}
+                  stars={item.stars}
+                  review={item.review}
+                  type={item.type}
+                  typeL={item.typeL}
+                  exclusive={item.exclusive}
+                  amount={item.amount}
+                  page={item.page}
+                  seo={item.seo}
+                />
+              )
+            })
+          }
+        </div>
       </div>
     );
   }

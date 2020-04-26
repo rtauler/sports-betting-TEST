@@ -14,7 +14,8 @@ function Result(props: {
   seo: React.ReactNode,
 }) {
   return (
-    <div className={styles.Result}>
+    <div className={styles.Result+ ' ' +styles.box}>
+    {/* <div className={styles.Result}> */}
       <a href={'' + props.page}>
         <div className={styles.result_card}>
           <div className={styles.position_indicator}>
