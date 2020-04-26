@@ -2,10 +2,19 @@
 .List {
     .filter_area {
         a.sort_filter_link {
-            @include sort-filter-link;
+            @include sort-filter;
+            width: auto;
             float: right;
             @media screen and (min-width: $break-large) {
                 float: left;
+            }
+        }
+        a.sort_filter_card {
+            @include sort-filter;
+            width: auto;
+            float: right;
+            @media screen and (max-width: $break-large) {
+                display: none;
             }
         }
         width: 100%;
