@@ -14,8 +14,14 @@
             @include sort-filter;
             width: auto;
             float: right;
+            display: flex;
+            align-items: center;
             @media screen and (max-width: $break-large) {
                 display: none;
+            }
+            p {
+                display: inline-block;
+                margin: 0 10px 0 0;
             }
         }
         width: 100%;

@@ -26,9 +26,8 @@ class List extends React.Component<any, any> {
   //define transCard and prevent update on click on card anchor
   transItems(e: { preventDefault: () => void; }) {
     e.preventDefault();
-    this.setState((prevState: { isList: any, isCard: any; }) => ({
+    this.setState((prevState: { isList: any; }) => ({
       isList: !prevState.isList,
-      isCard: !prevState.isCard
     }));
     console.log(this.state.isList)
     console.log(this.state.isCard)
@@ -54,8 +53,8 @@ class List extends React.Component<any, any> {
         <div className={styles.filter_area}>
           <a href="test.html" className={styles.sort_filter_link} onClick={this.sortItems}>Sort {this.state.isSortAlf ? 'By position' : 'Alphabetically'}</a>
           <a href="test.html" className={styles.sort_filter_card} onClick={this.transItems}>
-          Change View
-          <label className={styles.switch}>
+            <p>Change View</p>
+            <label className={styles.switch}>
               <input checked={this.state.isList ? true : false} type="checkbox"></input>
               <span className={styles.slider + ' ' + styles.round}></span>
             </label>
