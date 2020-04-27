@@ -2,7 +2,7 @@
 .Result {
     .result_card {
         @mixin box-animation {
-            transition: all .2s;
+            transition: all .6s;
             transition-timing-function: $cubic-beizer;
         }
         @mixin center {
@@ -40,15 +40,13 @@
         }
         .company_logo {
             @include common-card-part(32%);
-            a {
-                height: 100%;
-                width: 100%;
-                float: left;
-                @include center;
-                img {
-                    height: calc(100% - 30px);
-                    max-width: 100%;
-                }
+            height: 100%;
+            width: 100%;
+            float: left;
+            @include center;
+            img {
+                height: calc(100% - 30px);
+                max-width: 100%;
             }
             @media screen and (min-width: $break-large) {
                 width: 10%;

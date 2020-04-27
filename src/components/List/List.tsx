@@ -76,6 +76,7 @@ class List extends React.Component<any, any> {
             }, i: any) => {
               return (
                 <Result
+                  key={item.id}
                   id={item.id}
                   logo={item.logo}
                   stars={item.stars}

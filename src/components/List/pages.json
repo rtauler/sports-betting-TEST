@@ -63,5 +63,70 @@
         "amount": "$200",
         "page": "https://www.bodog.com",
         "seo": "linkSEO5.html"
+    },
+    {
+        "id": 6,
+        "name": "Bet365",
+        "logo": "b3",
+        "stars": 2,
+        "review": "review6.html",
+        "type": "Bonus",
+        "typeL": "Bonus Up to",
+        "exclusive": "- Exclusive -",
+        "amount": "$200",
+        "page": "https://www.bet365.es/#/HO/",
+        "seo": "linkSEO6.html"
+    },
+    {
+        "id": 7,
+        "name": "888sport",
+        "logo": "8s",
+        "stars": 3,
+        "review": "review7.html",
+        "type": "Free Bet",
+        "typeL": "Free Bet",
+        "exclusive": "- Exclusive -",
+        "amount": "$200",
+        "page": "https://www.888sport.es/#/home",
+        "seo": "linkSEO7.html"
+    },
+    {
+        "id": 8,
+        "name": "For the bettor",
+        "logo": "ftb",
+        "stars": 4,
+        "review": "review8.html",
+        "type": "Bonus",
+        "typeL": "100% Sign Up Bonus Up to",
+        "exclusive": "",
+        "amount": "$200",
+        "page": "https://www.10bet.com/",
+        "seo": "linkSEO8.html"
+    },
+    {
+        "id": 9,
+        "name": "LeoVegas",
+        "logo": "lv",
+        "stars": 5,
+        "review": "review9.html",
+        "type": "Free Bet",
+        "typeL": "Free Bet up to",
+        "exclusive": "- Exclusive -",
+        "amount": "$500",
+        "page": "https://www.leovegas.es",
+        "seo": "linkSEO9.html"
+    },
+    {
+        "id": 10,
+        "name": "WilliamHill",
+        "logo": "lv",
+        "stars": 5,
+        "review": "review9.html",
+        "type": "Free Bet",
+        "typeL": "Free Bet up to",
+        "exclusive": "- Exclusive -",
+        "amount": "$500",
+        "page": "https://www.leovegas.es",
+        "seo": "linkSEO9.html"
     }
 ]
