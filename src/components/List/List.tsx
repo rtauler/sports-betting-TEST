@@ -10,7 +10,7 @@ class List extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     //define initial state of sort order also define if item is card
-    this.state = { isSortAlf: false, isCard: true, Pages: Pages };
+    this.state = { isSortAlf: false, isList: true, isCard: false, Pages: Pages };
     this.sortItems = this.sortItems.bind(this);
     this.transItems = this.transItems.bind(this);
   }
@@ -26,12 +26,11 @@ class List extends React.Component<any, any> {
   //define transCard and prevent update on click on card anchor
   transItems(e: { preventDefault: () => void; }) {
     e.preventDefault();
-    if (window.innerWidth < 600) {
-      this.setState({isCard: false});
-    }
-    this.setState((prevState: { isCard: any; }) => ({
+    this.setState((prevState: { isList: any, isCard: any; }) => ({
+      isList: !prevState.isList,
       isCard: !prevState.isCard
     }));
+    console.log(this.state.isList)
     console.log(this.state.isCard)
   }
 
@@ -54,11 +53,17 @@ class List extends React.Component<any, any> {
         {/* click on sort anchor calls handle click function to sort the list items */}
         <div className={styles.filter_area}>
           <a href="test.html" className={styles.sort_filter_link} onClick={this.sortItems}>Sort {this.state.isSortAlf ? 'By position' : 'Alphabetically'}</a>
-          <a href="test.html" className={styles.sort_filter_card} onClick={this.transItems}>Change View</a>
+          <a href="test.html" className={styles.sort_filter_card} onClick={this.transItems}>
+          Change View
+          <label className={styles.switch}>
+              <input checked={this.state.isList ? true : false} type="checkbox"></input>
+              <span className={styles.slider + ' ' + styles.round}></span>
+            </label>
+          </a>
         </div>
 
         {/* check if component is card or not */}
-        <div className={this.state.isCard ? styles.items : styles.box_items}>
+        <div className={this.state.isList ? styles.items : styles.box_items}>
           {
             //  Pages.map(function (item) {
             this.state.Pages.map((item: {
@@ -72,7 +77,6 @@ class List extends React.Component<any, any> {
               amount: React.ReactNode;
               page: React.ReactNode;
               seo: React.ReactNode;
-              isCard: React.ReactNode;
             }, i: any) => {
               return (
                 <Result
@@ -87,7 +91,7 @@ class List extends React.Component<any, any> {
                   amount={item.amount}
                   page={item.page}
                   seo={item.seo}
-                  isCard={this.state.isCard}
+                  isList={this.state.isList}
                 />
               )
             })
