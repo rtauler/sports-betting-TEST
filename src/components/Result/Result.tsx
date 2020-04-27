@@ -6,7 +6,9 @@ function Result(props: any) {
     <div className={props.isList ? styles.Result : styles.Result + ' ' + styles.box}>
       <a href={'' + props.page}>
         <div className={styles.result_card}>
-          <div className={styles.position_indicator}>
+        {/* {this.state.isSortAlf ? 'By position' : 'Alphabetically'} */}
+          {/* <div className={styles.position_indicator}> */}
+          <div className={props.isSortAlf ? styles.position_indicator + ' ' + styles.hide : styles.position_indicator}>
             <p>{props.id}</p>
           </div>
           <div className={styles.company_logo}>
@@ -22,7 +24,6 @@ function Result(props: any) {
           </div>
           <div className={styles.info}>
             <div className={styles.info_wrapper}>
-              {/* <p className={styles.type_indicator_lb}>{props.exclusive}</p> */}
               <p className={styles.type_indicator_lb}>{props.exclusive ? '- Exclusive -' : ''}</p>
               <p className={styles.type_indicator_l}>{props.typeL}</p>
               <p className={styles.type_indicator}>{props.type}</p>

@@ -32,6 +32,9 @@
         .position_indicator {
             @include common-card-part(15%);
             justify-content: center;
+            &.hide {
+                visibility: hidden;
+            }
             p {
                 @include position-indicator;
                 text-align: center;
@@ -42,9 +45,8 @@
             }
         }
         .company_logo {
-            @include common-card-part(32%);
+            @include common-card-part(20%);
             height: 100%;
-            width: 20%;
             float: left;
             @include center;
             img {
@@ -60,6 +62,7 @@
             img.stars {
                 width: 55px;
                 display: none;
+                margin-left: 10px;
                 @media screen and (min-width: $break-large) {
                     display: block;
                 }
@@ -100,6 +103,7 @@
                         content: "\00a0";
                     }
                     display: none;
+                    margin:0;
                     @include type-indicator-l;
                     @media screen and (min-width: $break-large) {
                         display: inline-block;
@@ -126,7 +130,7 @@
             }
         }
         .expand {
-            @include common-card-part(12%);
+            @include common-card-part(24%);
             @include center;
             @include box-animation();
             justify-content: center;
@@ -181,7 +185,7 @@
             }
             .review_link {
                 @include absolute-center();
-                top: 160px;
+                top: 190px;
                 width: 100px;
                 height: auto;
                 img {
@@ -194,7 +198,10 @@
                 top: 100px;
                 width: 100%;
                 height: auto;
+                position: relative;
                 .info_wrapper {
+                    position: absolute;
+                    top: 20px;
                     padding: 0;
                 }
             }

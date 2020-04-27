@@ -95,6 +95,7 @@ class List extends React.Component<any, any> {
                   page={item.page}
                   seo={item.seo}
                   isList={this.state.isList}
+                  isSortAlf={this.state.isSortAlf}
                 />
               )
             })
