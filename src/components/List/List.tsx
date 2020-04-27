@@ -55,10 +55,10 @@ class List extends React.Component<any, any> {
         <div className={styles.filter_area}>
           <a href="test.html" className={styles.sort_filter_link} onClick={this.sortItems}>
             <p>Sort{' '}
-            {this.state.isSortAlf ? 'By position' : 'Alphabetically'}
+              {this.state.isSortAlf ? 'By position' : 'Alphabetically'}
             </p>
-            </a>
-            
+          </a>
+
           <a href="test.html" className={styles.sort_filter_card} onClick={this.transItems}>
             <p>Change View</p>
             <label className={styles.switch}>
@@ -70,37 +70,37 @@ class List extends React.Component<any, any> {
 
         {/* check if component is card or not */}
         <div className={this.state.isList ? styles.items : styles.box_items}>
-            {
-              this.state.Pages.map((item: {
-                id: React.ReactNode;
-                logo: React.ReactNode;
-                stars: React.ReactNode;
-                review: React.ReactNode;
-                type: React.ReactNode;
-                typeL: React.ReactNode;
-                exclusive: React.ReactNode;
-                amount: React.ReactNode;
-                page: React.ReactNode;
-                seo: React.ReactNode;
-              }, i: any) => {
-                return (
-                  <Result
-                    key={item.id}
-                    id={item.id}
-                    logo={item.logo}
-                    stars={item.stars}
-                    review={item.review}
-                    type={item.type}
-                    typeL={item.typeL}
-                    exclusive={item.exclusive}
-                    amount={item.amount}
-                    page={item.page}
-                    seo={item.seo}
-                    isList={this.state.isList}
-                  />
-                )
-              })
-            }
+          {
+            this.state.Pages.map((item: {
+              id: React.ReactNode;
+              logo: React.ReactNode;
+              stars: React.ReactNode;
+              review: React.ReactNode;
+              type: React.ReactNode;
+              typeL: React.ReactNode;
+              exclusive: React.ReactNode;
+              amount: React.ReactNode;
+              page: React.ReactNode;
+              seo: React.ReactNode;
+            }, i: any) => {
+              return (
+                <Result
+                  key={item.id}
+                  id={item.id}
+                  logo={item.logo}
+                  stars={item.stars}
+                  review={item.review}
+                  type={item.type}
+                  typeL={item.typeL}
+                  exclusive={item.exclusive}
+                  amount={item.amount}
+                  page={item.page}
+                  seo={item.seo}
+                  isList={this.state.isList}
+                />
+              )
+            })
+          }
         </div>
       </div>
     );
