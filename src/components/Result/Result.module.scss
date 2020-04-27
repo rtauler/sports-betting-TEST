@@ -41,7 +41,7 @@
         .company_logo {
             @include common-card-part(32%);
             height: 100%;
-            width: 100%;
+            width: 20;
             float: left;
             @include center;
             img {
@@ -169,10 +169,10 @@
             .company_logo {
                 @include absolute-center();
                 top: 40px;
-                width: 108px;
-                height: auto;
+                width: 120px;
+                height: 70px;
                 img {
-                    width: 108px;
+                    margin: 0 auto;
                 }
             }
             .review_link {
