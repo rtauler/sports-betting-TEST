@@ -2,7 +2,7 @@
 .Result {
     .result_card {
         @mixin box-animation {
-            transition: all .6s;
+            transition: .6s;
             transition-timing-function: $cubic-beizer;
         }
         @mixin center {
@@ -23,8 +23,11 @@
         margin-bottom: 10px;
         @include box-animation;
         &:hover {
-            transform: scale(1.015);
             @include box-animation;
+            transform: scale(1.015);
+            .expand {
+                background-color: $vivid-blue;
+            }
         }
         .position_indicator {
             @include common-card-part(15%);
@@ -125,7 +128,14 @@
         .expand {
             @include common-card-part(12%);
             @include center;
+            @include box-animation();
             justify-content: center;
+            background-color: $orangey-red;
+            border-radius: 0 8px 8px 0;
+            background-image: url('../../assets/icons/right.svg');
+            background-repeat: no-repeat;
+            background-size: 15px;
+            background-position: center;
             p {
                 @include play-now;
                 display: none;
@@ -133,12 +143,6 @@
                     display: inline-block;
                 }
             }
-            background-color: $orangey-red;
-            border-radius: 0 8px 8px 0;
-            background-image: url('../../assets/icons/right.svg');
-            background-repeat: no-repeat;
-            background-size: 15px;
-            background-position: center;
             @media screen and (min-width: $break-large) {
                 width: 10%;
                 background-position: calc(100% - 10px) 50%;
