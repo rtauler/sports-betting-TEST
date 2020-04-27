@@ -22,7 +22,8 @@ function Result(props: any) {
           </div>
           <div className={styles.info}>
             <div className={styles.info_wrapper}>
-              <p className={styles.type_indicator_lb}>{props.exclusive}</p>
+              {/* <p className={styles.type_indicator_lb}>{props.exclusive}</p> */}
+              <p className={styles.type_indicator_lb}>{props.exclusive ? '- Exclusive -' : ''}</p>
               <p className={styles.type_indicator_l}>{props.typeL}</p>
               <p className={styles.type_indicator}>{props.type}</p>
               <p className={styles.amount}>{props.amount}</p>

@@ -6,7 +6,7 @@
         "review": "review1.html",
         "type": "Bonus",
         "typeL": "Bonus up to",
-        "exclusive": "- Exclusive -",
+        "exclusive": true,
         "amount": "$200",
         "page": "https://www.sportsinteraction.com",
         "seo": "linkSEO1.html"
@@ -19,7 +19,7 @@
         "review": "review2.html",
         "type": "Free Bet",
         "typeL": "Free Bet",
-        "exclusive": "- Exclusive -",
+        "exclusive": true,
         "amount": "$250",
         "page": "https://www.powerplay.com",
         "seo": "linkSEO2.html"
@@ -33,7 +33,7 @@
         "review": "review3.html",
         "type": "Bonus",
         "typeL": "100% Sign Up Bonus Up to",
-        "exclusive": "",
+        "exclusive": false,
         "amount": "$250",
         "page": "https://betway.es/en/",
         "seo": "linkSEO3.html"
@@ -46,7 +46,7 @@
         "review": "review4.html",
         "type": "Free Bet",
         "typeL": "Free Bet Up to",
-        "exclusive": "- Exclusive -",
+        "exclusive": true,
         "amount": "$200",
         "page": "https://www.spinsports.com",
         "seo": "linkSEO4.html"
@@ -59,7 +59,7 @@
         "review": "review5.html",
         "type": "Bonus",
         "typeL": "100% Sign Up Bonus Up to",
-        "exclusive": "",
+        "exclusive": false,
         "amount": "$200",
         "page": "https://www.bodog.com",
         "seo": "linkSEO5.html"
@@ -72,7 +72,7 @@
         "review": "review6.html",
         "type": "Bonus",
         "typeL": "Bonus Up to",
-        "exclusive": "- Exclusive -",
+        "exclusive": true,
         "amount": "$200",
         "page": "https://www.bet365.es/#/HO/",
         "seo": "linkSEO6.html"
@@ -85,7 +85,7 @@
         "review": "review7.html",
         "type": "Free Bet",
         "typeL": "Free Bet",
-        "exclusive": "- Exclusive -",
+        "exclusive": true,
         "amount": "$200",
         "page": "https://www.888sport.es/#/home",
         "seo": "linkSEO7.html"
@@ -98,7 +98,7 @@
         "review": "review8.html",
         "type": "Bonus",
         "typeL": "100% Sign Up Bonus Up to",
-        "exclusive": "",
+        "exclusive": false,
         "amount": "$200",
         "page": "https://www.10bet.com/",
         "seo": "linkSEO8.html"
@@ -111,7 +111,7 @@
         "review": "review9.html",
         "type": "Free Bet",
         "typeL": "Free Bet up to",
-        "exclusive": "- Exclusive -",
+        "exclusive": true,
         "amount": "$500",
         "page": "https://www.leovegas.es",
         "seo": "linkSEO9.html"
@@ -124,7 +124,7 @@
         "review": "review10.html",
         "type": "Bonus",
         "typeL": "100% Sign Up Bonus Up to",
-        "exclusive": "",
+        "exclusive": false,
         "amount": "$200",
         "page": "https://www.leovegas.es",
         "seo": "linkSE010.html"
