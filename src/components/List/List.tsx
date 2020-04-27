@@ -12,7 +12,7 @@ class List extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     //define initial state of sort order also define if item is card
-    this.state = { isSortAlf: false, isList: true, isCard: false, Pages: Pages };
+    this.state = { isSortAlf: false, isList: true, Pages: Pages };
     this.sortItems = this.sortItems.bind(this);
     this.transItems = this.transItems.bind(this);
   }
@@ -31,8 +31,6 @@ class List extends React.Component<any, any> {
     this.setState((prevState: { isList: any; }) => ({
       isList: !prevState.isList,
     }));
-    console.log(this.state.isList)
-    console.log(this.state.isCard)
   }
 
   render() {
@@ -62,7 +60,7 @@ class List extends React.Component<any, any> {
           <a href="test.html" className={styles.sort_filter_card} onClick={this.transItems}>
             <p>Change View</p>
             <label className={styles.switch}>
-              <input checked={this.state.isList ? true : false} type="checkbox"></input>
+              <input checked={this.state.isList ? true : false} readOnly type="checkbox"></input>
               <span className={styles.slider + ' ' + styles.round}></span>
             </label>
           </a>
