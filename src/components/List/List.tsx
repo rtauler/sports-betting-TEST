@@ -5,7 +5,7 @@ import Result from '../Result/Result';
 //load external json with item list
 import Pages from './pages.json';
 
-var AnimateReorder = require('react-animate-reorder');
+
 
 
 class List extends React.Component<any, any> {
@@ -53,7 +53,12 @@ class List extends React.Component<any, any> {
       <div className={styles.List}>
         {/* click on sort anchor calls handle click function to sort the list items */}
         <div className={styles.filter_area}>
-          <a href="test.html" className={styles.sort_filter_link} onClick={this.sortItems}>Sort {this.state.isSortAlf ? 'By position' : 'Alphabetically'}</a>
+          <a href="test.html" className={styles.sort_filter_link} onClick={this.sortItems}>
+            <p>Sort{' '}
+            {this.state.isSortAlf ? 'By position' : 'Alphabetically'}
+            </p>
+            </a>
+            
           <a href="test.html" className={styles.sort_filter_card} onClick={this.transItems}>
             <p>Change View</p>
             <label className={styles.switch}>
@@ -65,7 +70,6 @@ class List extends React.Component<any, any> {
 
         {/* check if component is card or not */}
         <div className={this.state.isList ? styles.items : styles.box_items}>
-          <AnimateReorder>
             {
               this.state.Pages.map((item: {
                 id: React.ReactNode;
@@ -97,7 +101,6 @@ class List extends React.Component<any, any> {
                 )
               })
             }
-          </AnimateReorder>
         </div>
       </div>
     );
