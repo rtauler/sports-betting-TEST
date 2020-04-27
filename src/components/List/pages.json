@@ -119,14 +119,14 @@
     {
         "id": 10,
         "name": "WilliamHill",
-        "logo": "lv",
-        "stars": 5,
-        "review": "review9.html",
-        "type": "Free Bet",
-        "typeL": "Free Bet up to",
-        "exclusive": "- Exclusive -",
-        "amount": "$500",
+        "logo": "wh",
+        "stars": 2,
+        "review": "review10.html",
+        "type": "Bonus",
+        "typeL": "100% Sign Up Bonus Up to",
+        "exclusive": "",
+        "amount": "$200",
         "page": "https://www.leovegas.es",
-        "seo": "linkSEO9.html"
+        "seo": "linkSE010.html"
     }
 ]
