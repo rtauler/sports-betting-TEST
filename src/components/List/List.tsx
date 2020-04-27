@@ -5,6 +5,8 @@ import Result from '../Result/Result';
 //load external json with item list
 import Pages from './pages.json';
 
+var AnimateReorder = require('react-animate-reorder');
+
 
 class List extends React.Component<any, any> {
   constructor(props: any) {
@@ -63,38 +65,39 @@ class List extends React.Component<any, any> {
 
         {/* check if component is card or not */}
         <div className={this.state.isList ? styles.items : styles.box_items}>
-          {
-            //  Pages.map(function (item) {
-            this.state.Pages.map((item: {
-              id: React.ReactNode;
-              logo: React.ReactNode;
-              stars: React.ReactNode;
-              review: React.ReactNode;
-              type: React.ReactNode;
-              typeL: React.ReactNode;
-              exclusive: React.ReactNode;
-              amount: React.ReactNode;
-              page: React.ReactNode;
-              seo: React.ReactNode;
-            }, i: any) => {
-              return (
-                <Result
-                  key={item.id}
-                  id={item.id}
-                  logo={item.logo}
-                  stars={item.stars}
-                  review={item.review}
-                  type={item.type}
-                  typeL={item.typeL}
-                  exclusive={item.exclusive}
-                  amount={item.amount}
-                  page={item.page}
-                  seo={item.seo}
-                  isList={this.state.isList}
-                />
-              )
-            })
-          }
+          <AnimateReorder>
+            {
+              this.state.Pages.map((item: {
+                id: React.ReactNode;
+                logo: React.ReactNode;
+                stars: React.ReactNode;
+                review: React.ReactNode;
+                type: React.ReactNode;
+                typeL: React.ReactNode;
+                exclusive: React.ReactNode;
+                amount: React.ReactNode;
+                page: React.ReactNode;
+                seo: React.ReactNode;
+              }, i: any) => {
+                return (
+                  <Result
+                    key={item.id}
+                    id={item.id}
+                    logo={item.logo}
+                    stars={item.stars}
+                    review={item.review}
+                    type={item.type}
+                    typeL={item.typeL}
+                    exclusive={item.exclusive}
+                    amount={item.amount}
+                    page={item.page}
+                    seo={item.seo}
+                    isList={this.state.isList}
+                  />
+                )
+              })
+            }
+          </AnimateReorder>
         </div>
       </div>
     );
