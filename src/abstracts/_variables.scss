@@ -1,8 +1,10 @@
 //Color variables
 $greyish-brown: #484848;
+$light-grey: #dddddd;
 $orangey-red: #f44337;
 $vivid-blue: #2a42ed;
-$white: #ffffff;
+$white: #fff;
+$black: #000;
 $black-20: rgba(0, 0, 0, 0.2);
 //animations
 $cubic-beizer: cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -118,5 +120,15 @@ $break-large: 900px;
     letter-spacing: -0.25px;
     text-align: center;
     color: $white;
+    text-transform: uppercase;
+}
+
+@mixin main-title {
+    font-family: SourceSansPro;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: $black;
     text-transform: uppercase;
 }

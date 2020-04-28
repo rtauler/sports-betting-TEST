@@ -4,6 +4,8 @@
     padding: 10px;
     text-align: center;
     .filter_area {
+        display: flex;
+        align-items: center;
         a.sort_filter_link {
             @include sort-filter;
             width: auto;
@@ -12,6 +14,21 @@
             align-items: center;
             @media screen and (min-width: $break-large) {
                 float: left;
+            }
+        }
+        p.main_title {
+            @include main-title;
+            display: inline-block;
+            margin: 0;
+            align-items: center;
+            @media screen and (max-width: $break-large) {
+                font-size: 16px;
+            }
+            img {
+                height: 35px;
+                border: 1px solid $light-grey;
+                vertical-align: middle;
+                margin-right: 20px;
             }
         }
         a.sort_filter_card {

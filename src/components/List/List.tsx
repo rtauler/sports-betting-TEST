@@ -46,7 +46,7 @@ class List extends React.Component<any, any> {
   //define isAllItems and prevent update on click on sort anchor
   viewItems(e: { preventDefault: () => void; }) {
     e.preventDefault();
-    this.setState((prevState:  { isAllItems: any; } ) => ({
+    this.setState((prevState: { isAllItems: any; }) => ({
       isAllItems: !prevState.isAllItems,
     }));
   }
@@ -80,7 +80,10 @@ class List extends React.Component<any, any> {
               {this.state.isSortAlf ? 'By position' : 'Alphabetically'}
             </p>
           </a>
-
+          <p className={styles.main_title}>
+            <img src={require(`../../assets/logos/ca.svg`)} alt="" />
+             Best sports betting sites
+             </p>
           <a href="test.html" id="trans-items" className={styles.sort_filter_card} onClick={this.transItems}>
             <p>Change View</p>
             <label className={styles.switch}>
