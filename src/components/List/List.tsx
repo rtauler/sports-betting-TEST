@@ -91,7 +91,7 @@ class List extends React.Component<any, any> {
             </label>
           </a>
         </div>
-
+        <div className={styles.line}></div>
         {/* check if component is card or not */}
         <div className={this.state.isList ? styles.items : styles.box_items}>
           {
