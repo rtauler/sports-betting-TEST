@@ -32,8 +32,8 @@
         .position_indicator {
             @include common-card-part(15%);
             justify-content: center;
-            &.hide {
-                visibility: hidden;
+            &.alf {
+                display: none;
             }
             p {
                 @include position-indicator;
@@ -52,9 +52,16 @@
             img {
                 height: calc(100% - 30px);
                 max-width: 100%;
+                padding-left: 10px;
             }
             @media screen and (min-width: $break-large) {
                 width: 10%;
+            }
+            &.alf {
+                width: 15%;
+                @media screen and (max-width: $break-large) {
+                    width: 35%;
+                }
             }
         }
         .review_link {
@@ -62,7 +69,7 @@
             img.stars {
                 width: 55px;
                 display: none;
-                margin-left: 10px;
+                padding-left: 20px;
                 @media screen and (min-width: $break-large) {
                     display: block;
                 }
@@ -133,7 +140,6 @@
             @include common-card-part(24%);
             @include center;
             @include box-animation();
-            justify-content: center;
             background-color: $orangey-red;
             border-radius: 0 8px 8px 0;
             background-image: url('../../assets/icons/right.svg');
@@ -145,6 +151,8 @@
                 display: none;
                 @media screen and (min-width: $break-large) {
                     display: inline-block;
+                    margin: 0;
+                    padding-left: 10px;
                 }
             }
             @media screen and (min-width: $break-large) {
@@ -181,6 +189,7 @@
                 height: 70px;
                 img {
                     margin: 0 auto;
+                    padding: 0;
                 }
             }
             .review_link {
@@ -206,11 +215,15 @@
                 }
             }
             .expand {
+                justify-content: center;
                 width: calc(100% - 20px);
-                height: auto;
+                height: 40px;
                 border-radius: 8px;
                 @include absolute-center();
                 bottom: 10px;
+                p {
+                    padding: 0;
+                }
             }
         }
     }

@@ -6,10 +6,10 @@ function Result(props: any) {
     <div className={props.isList ? styles.Result : styles.Result + ' ' + styles.box}>
       <a href={'' + props.page}>
         <div className={styles.result_card}>
-          <div className={props.isSortAlf ? styles.position_indicator + ' ' + styles.hide : styles.position_indicator}>
+          <div className={props.isSortAlf ? styles.position_indicator + ' ' + styles.alf : styles.position_indicator}>
             <p>{props.id}</p>
           </div>
-          <div className={styles.company_logo}>
+          <div className={props.isSortAlf ? styles.company_logo + ' ' + styles.alf : styles.company_logo}>
             <a id="seo_url" href={'' + props.seo}>
               <img id="seo_img" src={require(`../../assets/logos/${props.logo}.svg`)} alt="" />
             </a>
