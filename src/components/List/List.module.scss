@@ -1,6 +1,8 @@
 @import '../../variables.scss';
 @import 'toggle.scss';
 .List {
+    padding: 10px;
+    text-align: center;
     .filter_area {
         a.sort_filter_link {
             @include sort-filter;
@@ -38,5 +40,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    padding: 10px;
+    a.view_more {
+        @include view_more;
+    }
 }

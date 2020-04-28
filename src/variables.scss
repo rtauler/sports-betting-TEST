@@ -51,13 +51,13 @@ $break-large: 900px;
     color: $vivid-blue;
 }
 
-@mixin view-all {
+@mixin view_more {
     font-family: SourceSansPro;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0px;
     text-align: center;
-    color: $vivid-blue-two;
+    color: $vivid-blue;
 }
 
 @mixin sort-filter {

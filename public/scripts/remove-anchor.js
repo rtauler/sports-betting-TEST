@@ -23,12 +23,16 @@
             unwrap(elements[i]);
         }
     }
+    //initial unwrap of seo url
     unWrapAllItems();
 
+    //in case user clicks on button view more, unwrap the newly created
     var retry_click = function() {
-        var delayInMilliseconds = 10; //1 second
-        setTimeout(function() {
-            unWrapAllItems();
-        }, delayInMilliseconds);
-    }
+            //fake delay to give time allow removoving the anchor of new elements
+            setTimeout(function() {
+                unWrapAllItems();
+            }, 0);
+
+        }
+        //check on button to wait for creation
     document.getElementById('view_all').onclick = retry_click;

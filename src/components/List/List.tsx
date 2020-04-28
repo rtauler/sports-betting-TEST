@@ -125,7 +125,7 @@ class List extends React.Component<any, any> {
             })
           }
         </div>
-        <a href="test.html" id="view_all" onClick={this.viewItems}>View All Sports Betting Sites</a>
+        <a href="test.html" id="view_all" className={styles.view_more} onClick={this.viewItems}>View {this.state.isAllItems ? 'Less' : 'More'} Sports Betting Sites</a>
       </div>
     );
   }
