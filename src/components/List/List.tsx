@@ -80,10 +80,10 @@ class List extends React.Component<any, any> {
               {this.state.isSortAlf ? 'By position' : 'Alphabetically'}
             </p>
           </a>
-          <p className={styles.main_title}>
+          <div className={styles.main_title}>
             <img src={require(`../../assets/logos/ca.svg`)} alt="" />
              Best sports betting sites
-             </p>
+             </div>
           <a href="test.html" id="trans-items" className={styles.sort_filter_card} onClick={this.transItems}>
             <p>Change View</p>
             <label className={styles.switch}>
