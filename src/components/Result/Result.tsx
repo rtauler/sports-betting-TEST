@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Result.module.scss';
+import styles from './_Result.module.scss';
 
 function Result(props: any) {
   return (
