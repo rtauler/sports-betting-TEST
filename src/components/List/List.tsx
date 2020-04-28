@@ -10,12 +10,17 @@ class List extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     //define initial state of sort order also define if item is card
-    this.state = { isSortAlf: false, isList: true, Pages: Pages };
+    this.state = { isSortAlf: false, isList: true, isAllItems: false, Pages: Pages };
     this.sortItems = this.sortItems.bind(this);
     this.transItems = this.transItems.bind(this);
-  }
-  //check for window width with check of window resize
+    this.viewItems = this.viewItems.bind(this);
 
+  }
+  //define show more/show less states
+  showMore = () => this.setState({ showAll: true });
+  showLess = () => this.setState({ showAll: false });
+
+  //check for window width with check of window resize
   resize = () => this.forceUpdate()
   componentDidMount() {
     window.addEventListener('resize', this.resize)
@@ -41,7 +46,17 @@ class List extends React.Component<any, any> {
     }));
   }
 
+  //define isAllItems and prevent update on click on sort anchor
+  viewItems(e: { preventDefault: () => void; }) {
+    e.preventDefault();
+    this.setState((prevState:  { isAllItems: any; } ) => ({
+      isAllItems: !prevState.isAllItems,
+    }));
+  }
+
   render() {
+    //show more/show less
+
     //establish logic on what to do when clicking on the sort anchor
     if (this.state.isSortAlf === true) {
       Pages.sort(function (a, b) {
@@ -54,6 +69,9 @@ class List extends React.Component<any, any> {
         return a.id - b.id;
       });
     }
+
+
+
 
 
     return (
@@ -78,7 +96,7 @@ class List extends React.Component<any, any> {
         {/* check if component is card or not */}
         <div className={this.state.isList ? styles.items : styles.box_items}>
           {
-            this.state.Pages.map((item: {
+            this.state.Pages.slice(0, this.state.isAllItems ? this.state.Pages.lenght : 5).map((item: {
               id: React.ReactNode;
               logo: React.ReactNode;
               stars: React.ReactNode;
@@ -110,6 +128,7 @@ class List extends React.Component<any, any> {
             })
           }
         </div>
+        <a href="test.html" onClick={this.viewItems}>View All Sports Betting Sites</a>
       </div>
     );
   }
