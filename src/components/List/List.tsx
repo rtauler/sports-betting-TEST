@@ -16,9 +16,6 @@ class List extends React.Component<any, any> {
     this.viewItems = this.viewItems.bind(this);
 
   }
-  //define show more/show less states
-  showMore = () => this.setState({ showAll: true });
-  showLess = () => this.setState({ showAll: false });
 
   //check for window width with check of window resize
   resize = () => this.forceUpdate()
@@ -128,7 +125,7 @@ class List extends React.Component<any, any> {
             })
           }
         </div>
-        <a href="test.html" onClick={this.viewItems}>View All Sports Betting Sites</a>
+        <a href="test.html" id="view_all" onClick={this.viewItems}>View All Sports Betting Sites</a>
       </div>
     );
   }

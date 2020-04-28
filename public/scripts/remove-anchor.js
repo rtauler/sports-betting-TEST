@@ -10,9 +10,25 @@
         wrapper.parentNode.replaceChild(docFrag, wrapper);
     }
     // create array of elements that have seo_url
-    var elements = document.querySelectorAll('#seo_url');
-    // iterate through all of them and unwrap them
-    for (var i = 0; i < elements.length; i++) {
-        console.log(elements[i]);
-        unwrap(elements[i]);
+    function findElements() {
+        var elements = document.querySelectorAll('#seo_url');
+        return elements;
     }
+
+    // iterate through all of them and unwrap them
+    function unWrapAllItems() {
+        var elements = findElements();
+        for (var i = 0; i < elements.length; i++) {
+            console.log(elements[i]);
+            unwrap(elements[i]);
+        }
+    }
+    unWrapAllItems();
+
+    var retry_click = function() {
+        var delayInMilliseconds = 10; //1 second
+        setTimeout(function() {
+            unWrapAllItems();
+        }, delayInMilliseconds);
+    }
+    document.getElementById('view_all').onclick = retry_click;
