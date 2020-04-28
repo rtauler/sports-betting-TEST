@@ -6,8 +6,6 @@ function Result(props: any) {
     <div className={props.isList ? styles.Result : styles.Result + ' ' + styles.box}>
       <a href={'' + props.page}>
         <div className={styles.result_card}>
-        {/* {this.state.isSortAlf ? 'By position' : 'Alphabetically'} */}
-          {/* <div className={styles.position_indicator}> */}
           <div className={props.isSortAlf ? styles.position_indicator + ' ' + styles.hide : styles.position_indicator}>
             <p>{props.id}</p>
           </div>

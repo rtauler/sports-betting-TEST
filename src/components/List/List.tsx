@@ -1,12 +1,10 @@
 import React from 'react';
+
 import styles from './List.module.scss';
 import Result from '../Result/Result';
 
 //load external json with item list
 import Pages from './pages.json';
-
-
-
 
 class List extends React.Component<any, any> {
   constructor(props: any) {
@@ -16,6 +14,16 @@ class List extends React.Component<any, any> {
     this.sortItems = this.sortItems.bind(this);
     this.transItems = this.transItems.bind(this);
   }
+  //check for window width with check of window resize
+
+  resize = () => this.forceUpdate()
+  componentDidMount() {
+    window.addEventListener('resize', this.resize)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize)
+  }
+  //----------------
 
   //define sortItems and prevent update on click on sort anchor
   sortItems(e: { preventDefault: () => void; }) {
@@ -25,7 +33,7 @@ class List extends React.Component<any, any> {
     }));
   }
 
-  //define transCard and prevent update on click on card anchor
+  //define transItem and prevent update on click on card anchor
   transItems(e: { preventDefault: () => void; }) {
     e.preventDefault();
     this.setState((prevState: { isList: any; }) => ({
@@ -47,6 +55,7 @@ class List extends React.Component<any, any> {
       });
     }
 
+
     return (
       <div className={styles.List}>
         {/* click on sort anchor calls handle click function to sort the list items */}
@@ -57,10 +66,10 @@ class List extends React.Component<any, any> {
             </p>
           </a>
 
-          <a href="test.html" className={styles.sort_filter_card} onClick={this.transItems}>
+          <a href="test.html" id="trans-items" className={styles.sort_filter_card} onClick={this.transItems}>
             <p>Change View</p>
             <label className={styles.switch}>
-              <input checked={this.state.isList ? true : false} readOnly type="checkbox"></input>
+              <input id="checkbox" checked={this.state.isList ? false : true} type="checkbox" readOnly></input>
               <span className={styles.slider + ' ' + styles.round}></span>
             </label>
           </a>
