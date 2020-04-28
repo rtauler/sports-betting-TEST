@@ -75,7 +75,7 @@ class List extends React.Component<any, any> {
       <div className={styles.List}>
         {/* click on sort anchor calls handle click function to sort the list items */}
         <div className={styles.filter_area}>
-          <a href="test.html" className={styles.sort_filter_link} onClick={this.sortItems}>
+          <a href="test.html" id="sort" className={styles.sort_filter_link} onClick={this.sortItems}>
             <p>Sort{' '}
               {this.state.isSortAlf ? 'By position' : 'Alphabetically'}
             </p>

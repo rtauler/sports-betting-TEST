@@ -36,3 +36,4 @@
         }
         //check on button to wait for creation
     document.getElementById('view_all').onclick = retry_click;
+    document.getElementById('sort').onclick = retry_click;
